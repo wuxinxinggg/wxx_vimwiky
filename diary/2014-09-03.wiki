@@ -8,23 +8,23 @@
 
 === 合并分支到主分支 ===
 * 避免因为别人提交了代码导致提交代码到远程仓库时时出现冲突，让master分支和远程分支保持同步；
-`git checkout master` __切换到master分支__
-`git pull --rebase origin master` __同步远程仓库__
+`git checkout master` _切换到master分支_
+`git pull --rebase origin master` _同步远程仓库_
 
 ==== 合并new-feature分支到master分支 ====
 * 避免因为master分支和咬合并的分支有差异，合并分支时出现冲突，让new-feature分支和master保持同步
-`git checkout new-feature` __切换到new-feature分支__
-`git rebase master` __同步master分支__
-`git checkout master` __切换到master分支__
-`git merge new-feature` __合并new-feature到master__
-`git push -u origin master` __推送修改到远程仓库__
+`git checkout new-feature` _切换到new-feature分支_
+`git rebase master` _同步master分支_
+`git checkout master` _切换到master分支_
+`git merge new-feature` _合并new-feature到master_
+`git push -u origin master` _推送修改到远程仓库_
 
 ==== 合并fix-bug 分支到主分支====
 * 避免因为别人提交了代码导致提交代码到远程仓库时时出现冲突，让master分支和远程分支保持同步；
-`git checkout master` __切换到master分支__
-`git pull --rebase origin master` __同步远程仓库__
-`git checkout fix-bug` __切换到fix-bug分支__
+`git checkout master` _切换到master分支_
+`git pull --rebase origin master` _同步远程仓库_
+`git checkout fix-bug` _切换到fix-bug分支_
 `git rebase master`
-`git checkout master` __切换到master分支__
-`git merge fix-bug` __合并new-feature到master__
-`git push -u origin master` __推送修改到远程仓库__
+`git checkout master` _切换到master分支_
+`git merge fix-bug` _合并new-feature到master_
+`git push -u origin master` _推送修改到远程仓库_
